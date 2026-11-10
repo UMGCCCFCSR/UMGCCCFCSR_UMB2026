@@ -1,0 +1,39 @@
+---
+title: "QR Codes"
+format: html
+eval: FALSE
+---
+
+
+This page was used to generate the QR codes needed for our Cyto 2026 poster using the `qrcode` R package. 
+
+```{r}
+library(qrcode)
+```
+
+
+# Helper Function
+
+```{r}
+QR_Helper <- function(url, output, filename){
+
+code <- qr_code(url)
+
+TheFileName  <- paste0(filename, ".svg")
+
+StoreHere <- file.path(output, TheFileName)
+
+generate_svg(code, filename = StoreHere)
+#plot(code)
+}
+```
+
+# Homepage
+
+```{r}
+#| eval: FALSE
+
+QR_Helper(url="https://umgcccfcsr.github.io/CytometryInR/",
+    output="outputs", 
+    filename="Homepage")
+```

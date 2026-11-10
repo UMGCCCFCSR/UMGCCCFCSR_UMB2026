@@ -1,0 +1,38 @@
+project:
+  type: website
+  output-dir: docs
+  render: 
+  -  index.qmd
+website:
+  google-analytics: "G-LZ35J3XE4D"
+  title: "UMGCCC Flow Cytometry Shared Resource"
+  page-navigation: true 
+  site-path: "/UMGCCCFCSR_UMB2026/"
+  announcement: 
+    icon: info-circle
+    dismissable: true
+    content: "Thanks for investigating further!"
+    type: info
+    position: below-navbar 
+  navbar:
+    logo: images/hex.svg
+    background: white
+    left:
+      - text: "Home"
+        href: index.qmd      
+      - text: Poster
+        href: https://umgcccfcsr.github.io/UMGCCCFCSR_UMB2026/UMGCCC-FCSR-2026.pdf
+    right:
+      - icon: youtube
+        href: https://www.youtube.com/@CytometryInR
+        aria-label: YouTube
+      - icon: github
+        href: https://github.com/UMGCCCFCSR/  
+  page-footer: 
+   left: Made with [Quarto](https://quarto.org/)
+   right: |
+    ![AGPL-3.0](/images/AGPL3.png)
+    ![CC-BY-SA](/images/CCBYSA.png)
+format:
+  html:
+    css: styles.css
